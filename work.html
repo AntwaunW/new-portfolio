@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Work — Antwaun Washington</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/work.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Geometric background -->
+  <canvas id="geoBg" aria-hidden="true"></canvas>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">AW<span>_</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="work.html" class="nav-active">Work</a></li>
+      <li><a href="skills.html">Skills</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <main class="work-main">
+
+    <!-- ── PAGE HEADER ── -->
+    <section class="work-header-section">
+      <div class="work-header-inner">
+        <p class="section-tag">
+          <span class="tag-line"></span>
+          What I've been building
+        </p>
+        <h1 class="work-title">
+          My <span class="title-green">Work.</span>
+        </h1>
+        <p class="work-subtitle">
+          Every project here is a step in the journey — built to learn, shipped to grow.
+          More dropping as the code gets written.
+        </p>
+      </div>
+      <div class="work-bg-word" aria-hidden="true">WORK</div>
+    </section>
+
+    <!-- ── FILTER BAR ── -->
+    <div class="filter-bar reveal">
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="frontend">Frontend</button>
+      <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+      <button class="filter-btn" data-filter="coming-soon">Coming Soon</button>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         PROJECT GRID
+         ─────────────────────────────────────
+         TO ADD A NEW PROJECT LATER:
+         1. Copy one .project-card block
+         2. Remove the "coming-soon" class from the card
+         3. Remove the .cs-overlay div inside it
+         4. Update data-category, title, description,
+            tech tags, and links
+         5. Add a real screenshot as the .card-img src
+    ══════════════════════════════════════ -->
+    <section class="projects-grid-section">
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- ── PROJECT 1: Weather Dashboard ── -->
+        <article class="project-card coming-soon reveal" data-category="frontend">
+          <div class="card-img-wrap">
+            <div class="card-img card-img--weather">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="32" cy="22" r="10" stroke="currentColor" stroke-width="2"/>
+                  <path d="M12 44c0-8 8-14 20-14s20 6 20 14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 38h4M52 38h4M32 8V4M16 14l-3-3M48 14l3-3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <!-- Coming Soon overlay — remove this div when project is live -->
+            <div class="cs-overlay">
+              <span class="cs-badge">In Progress</span>
+              <p class="cs-text">Building Soon</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">01</span>
+              <div class="card-status coming-soon-tag">Coming Soon</div>
+            </div>
+            <h2 class="card-title">Weather Dashboard</h2>
+            <p class="card-desc">
+              A real-time weather app pulling live data from a public API. Search any city,
+              view current conditions, and see a 5-day forecast — all in a clean, responsive UI.
+            </p>
+            <div class="card-tags">
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+              <span class="tag">REST API</span>
+            </div>
+            <div class="card-links">
+              <!-- Uncomment and update these when project is live:
+              <a href="YOUR_LIVE_LINK" class="card-link card-link--primary" target="_blank" rel="noopener">
+                Live Demo
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="YOUR_GITHUB_LINK" class="card-link card-link--secondary" target="_blank" rel="noopener">
+                GitHub
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 00-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0020 4.77 5.07 5.07 0 0019.91 1S18.73.65 16 2.48a13.38 13.38 0 00-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 005 4.77a5.44 5.44 0 00-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 009 18.13V22"/></svg>
+              </a>
+              -->
+              <span class="link-placeholder">Links available on launch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 2: Recipe App ── -->
+        <article class="project-card coming-soon reveal" data-category="frontend" style="animation-delay:0.08s">
+          <div class="card-img-wrap">
+            <div class="card-img card-img--recipe">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="8" width="44" height="48" rx="4" stroke="currentColor" stroke-width="2"/>
+                  <path d="M20 20h24M20 28h24M20 36h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="46" cy="46" r="6" stroke="currentColor" stroke-width="2"/>
+                  <path d="M44 46h4M46 44v4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cs-overlay">
+              <span class="cs-badge">In Progress</span>
+              <p class="cs-text">Building Soon</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">02</span>
+              <div class="card-status coming-soon-tag">Coming Soon</div>
+            </div>
+            <h2 class="card-title">Multi-Page Recipe App</h2>
+            <p class="card-desc">
+              A multi-page recipe browsing app with category filtering, individual recipe detail
+              pages, and a clean card-based layout. Built to practice React routing and state.
+            </p>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">React Router</span>
+              <span class="tag">CSS</span>
+              <span class="tag">API</span>
+            </div>
+            <div class="card-links">
+              <span class="link-placeholder">Links available on launch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 3: E-Commerce Catalog ── -->
+        <article class="project-card coming-soon reveal" data-category="frontend" style="animation-delay:0.16s">
+          <div class="card-img-wrap">
+            <div class="card-img card-img--ecommerce">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 8h6l4 24h28l4-16H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="26" cy="54" r="3" stroke="currentColor" stroke-width="2"/>
+                  <circle cx="42" cy="54" r="3" stroke="currentColor" stroke-width="2"/>
+                  <path d="M28 24h8M32 20v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cs-overlay">
+              <span class="cs-badge">In Progress</span>
+              <p class="cs-text">Building Soon</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">03</span>
+              <div class="card-status coming-soon-tag">Coming Soon</div>
+            </div>
+            <h2 class="card-title">E-Commerce Product Catalog</h2>
+            <p class="card-desc">
+              A product catalog with category filtering, a functional shopping cart,
+              and quantity management — focusing on React state management and component design.
+            </p>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">useState</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
+            </div>
+            <div class="card-links">
+              <span class="link-placeholder">Links available on launch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 4: Auth System ── -->
+        <article class="project-card coming-soon reveal" data-category="fullstack" style="animation-delay:0.24s">
+          <div class="card-img-wrap">
+            <div class="card-img card-img--auth">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="16" y="28" width="32" height="24" rx="3" stroke="currentColor" stroke-width="2"/>
+                  <path d="M22 28v-8a10 10 0 0120 0v8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <circle cx="32" cy="40" r="3" stroke="currentColor" stroke-width="2"/>
+                  <path d="M32 43v5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cs-overlay">
+              <span class="cs-badge">In Progress</span>
+              <p class="cs-text">Building Soon</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">04</span>
+              <div class="card-status coming-soon-tag">Coming Soon</div>
+            </div>
+            <h2 class="card-title">User Authentication System</h2>
+            <p class="card-desc">
+              A full user auth flow — register, login, protected routes, and session management.
+              Practicing secure backend integration with JWT and password hashing.
+            </p>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+              <span class="tag">JWT</span>
+              <span class="tag">Express</span>
+            </div>
+            <div class="card-links">
+              <span class="link-placeholder">Links available on launch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ── PROJECT 5: MERN App ── -->
+        <article class="project-card coming-soon reveal" data-category="fullstack" style="animation-delay:0.32s">
+          <div class="card-img-wrap">
+            <div class="card-img card-img--mern">
+              <div class="placeholder-icon">
+                <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="8" y="8" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <rect x="36" y="8" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <rect x="8" y="36" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <rect x="36" y="36" width="20" height="20" rx="2" stroke="currentColor" stroke-width="2"/>
+                  <path d="M28 18h8M18 28v8M46 28v8M36 46h-8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+            <div class="cs-overlay">
+              <span class="cs-badge">In Progress</span>
+              <p class="cs-text">Building Soon</p>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">05</span>
+              <div class="card-status coming-soon-tag">Coming Soon</div>
+            </div>
+            <h2 class="card-title">Full-Stack MERN Application</h2>
+            <p class="card-desc">
+              A complete full-stack app built on the MERN stack — MongoDB, Express, React,
+              and Node. The capstone of the current learning roadmap, combining everything.
+            </p>
+            <div class="card-tags">
+              <span class="tag">MongoDB</span>
+              <span class="tag">Express</span>
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <div class="card-links">
+              <span class="link-placeholder">Links available on launch</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- ══════════════════════════════════════
+             ADD NEW PROJECT HERE
+             ─────────────────────────────────────
+             Copy the block below, paste it before
+             this comment, and fill in your details.
+        ══════════════════════════════════════
+        <article class="project-card reveal" data-category="frontend">
+          <div class="card-img-wrap">
+            <img src="YOUR_SCREENSHOT.png" alt="Project name screenshot" class="card-img card-img--real" />
+          </div>
+          <div class="card-body">
+            <div class="card-header-row">
+              <span class="card-number">06</span>
+              <div class="card-status live-tag">Live</div>
+            </div>
+            <h2 class="card-title">Your Project Name</h2>
+            <p class="card-desc">Short description of what it does and what you learned.</p>
+            <div class="card-tags">
+              <span class="tag">React</span>
+              <span class="tag">Node.js</span>
+            </div>
+            <div class="card-links">
+              <a href="YOUR_LIVE_LINK" class="card-link card-link--primary" target="_blank" rel="noopener">
+                Live Demo
+                <svg width="12" height="12" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg>
+              </a>
+              <a href="YOUR_GITHUB_LINK" class="card-link card-link--secondary" target="_blank" rel="noopener">
+                GitHub
+              </a>
+            </div>
+          </div>
+        </article>
+        -->
+
+      </div>
+
+      <!-- Empty state when filter returns nothing -->
+      <div class="no-results" id="noResults" style="display:none">
+        <p>No projects in that category yet — check back soon.</p>
+      </div>
+
+    </section>
+
+    <!-- ── ROADMAP STRIP ── -->
+    <section class="roadmap-section reveal">
+      <div class="roadmap-inner">
+        <p class="section-tag" style="margin-bottom:1.5rem">
+          <span class="tag-line"></span>
+          What's coming next
+        </p>
+        <div class="roadmap-grid">
+          <div class="roadmap-item">
+            <span class="roadmap-dot roadmap-dot--active"></span>
+            <span class="roadmap-label">Weather Dashboard</span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot roadmap-dot--active"></span>
+            <span class="roadmap-label">Recipe App</span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot roadmap-dot--active"></span>
+            <span class="roadmap-label">E-Commerce Catalog</span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot roadmap-dot--queued"></span>
+            <span class="roadmap-label">Auth System</span>
+          </div>
+          <div class="roadmap-item">
+            <span class="roadmap-dot roadmap-dot--queued"></span>
+            <span class="roadmap-label">MERN App</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="about-cta reveal">
+      <p class="cta-label">Have a project in mind?</p>
+      <h2 class="cta-heading">Let's Build Together.</h2>
+      <div class="cta-actions">
+        <a href="about.html" class="btn-primary">
+          About Me
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="skills.html" class="btn-secondary">View My Skills</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/main.js"></script>
+  <script src="js/work.js"></script>
+</body>
+</html>

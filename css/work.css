@@ -1,0 +1,552 @@
+/* ============================================================
+   WORK PAGE — work.css
+   Extends style.css — projects grid, cards, filter bar
+   ============================================================ */
+
+#geoBg {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.nav-active { color: var(--green-bright) !important; }
+
+.work-main {
+  position: relative;
+  z-index: 1;
+  padding-top: 100px;
+}
+
+/* ============================================================
+   PAGE HEADER
+   ============================================================ */
+.work-header-section {
+  position: relative;
+  min-height: 46vh;
+  display: flex;
+  align-items: center;
+  padding: 5rem 4rem 4rem;
+  overflow: hidden;
+}
+
+.work-header-inner {
+  position: relative;
+  z-index: 2;
+  max-width: 680px;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.6s ease 0.2s forwards;
+}
+
+.tag-line {
+  display: inline-block;
+  width: 28px;
+  height: 1.5px;
+  background: var(--green-bright);
+}
+
+.work-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.03em;
+  color: var(--white);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.35s forwards;
+}
+
+.title-green { color: var(--green-bright); }
+
+.work-subtitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  line-height: 1.75;
+  color: var(--gray);
+  max-width: 500px;
+  opacity: 0;
+  animation: fadeUp 0.7s ease 0.5s forwards;
+}
+
+.work-bg-word {
+  position: absolute;
+  right: -1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-family: var(--font-display);
+  font-size: clamp(6rem, 18vw, 14rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(54, 255, 0, 0.05);
+  pointer-events: none;
+  user-select: none;
+  white-space: nowrap;
+  opacity: 0;
+  animation: fadeIn 1.2s ease 0.8s forwards;
+}
+
+/* ============================================================
+   FILTER BAR
+   ============================================================ */
+.filter-bar {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0 4rem 3rem;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gray);
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 0.55rem 1.2rem;
+  cursor: none;
+  transition: color 0.2s, border-color 0.2s, background 0.2s;
+  clip-path: polygon(6px 0%, 100% 0%, calc(100% - 6px) 100%, 0% 100%);
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  color: var(--bg-top);
+  background: var(--green-bright);
+  border-color: var(--green-bright);
+}
+
+/* ============================================================
+   PROJECTS GRID
+   ============================================================ */
+.projects-grid-section {
+  padding: 0 4rem 5rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* ============================================================
+   PROJECT CARD BASE
+   ============================================================ */
+.project-card {
+  background: rgba(10, 11, 26, 0.8);
+  border: 1px solid rgba(54, 255, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: border-color 0.3s, transform 0.3s;
+  clip-path: polygon(0 0, calc(100% - 18px) 0, 100% 18px, 100% 100%, 18px 100%, 0 calc(100% - 18px));
+  backdrop-filter: blur(8px);
+  position: relative;
+}
+
+.project-card:hover {
+  border-color: rgba(54, 255, 0, 0.32);
+  transform: translateY(-5px);
+}
+
+/* ── IMAGE AREA ── */
+.card-img-wrap {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Placeholder styled backgrounds per project */
+.card-img {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-img--weather   { background: linear-gradient(135deg, #0d1640 0%, #1a2a6c 60%, #0a3a5a 100%); }
+.card-img--recipe    { background: linear-gradient(135deg, #1a0a00 0%, #3a1800 60%, #5a2800 100%); }
+.card-img--ecommerce { background: linear-gradient(135deg, #0a1a00 0%, #1a3800 60%, #2a5200 100%); }
+.card-img--auth      { background: linear-gradient(135deg, #1a0030 0%, #2d0050 60%, #1f2479 100%); }
+.card-img--mern      { background: linear-gradient(135deg, #001a10 0%, #003a28 60%, #156100 100%); }
+/* Real screenshot — used when project is live */
+.card-img--real      { object-fit: cover; object-position: top; }
+
+.placeholder-icon {
+  color: rgba(255,255,255,0.12);
+  width: 72px;
+  height: 72px;
+}
+
+.placeholder-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ── COMING SOON OVERLAY ── */
+.cs-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 11, 26, 0.72);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  backdrop-filter: blur(2px);
+  transition: opacity 0.3s;
+}
+
+.project-card:hover .cs-overlay {
+  opacity: 0.85;
+}
+
+.cs-badge {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--bg-top);
+  background: var(--olive);
+  padding: 0.28rem 0.9rem;
+  font-weight: 700;
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+}
+
+.cs-text {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+}
+
+/* ── CARD BODY ── */
+.card-body {
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  flex: 1;
+}
+
+.card-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.card-number {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  color: var(--gray);
+}
+
+/* Status badges */
+.card-status {
+  font-family: var(--font-mono);
+  font-size: 0.55rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 0.22rem 0.75rem;
+  font-weight: 700;
+  clip-path: polygon(4px 0%, 100% 0%, calc(100% - 4px) 100%, 0% 100%);
+}
+
+.coming-soon-tag {
+  color: var(--bg-top);
+  background: rgba(167, 191, 6, 0.85);
+}
+
+.live-tag {
+  color: var(--bg-top);
+  background: var(--green-bright);
+}
+
+.wip-tag {
+  color: var(--white);
+  background: rgba(31, 36, 121, 0.9);
+  border: 1px solid rgba(122,140,255,0.4);
+}
+
+.card-title {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+}
+
+.card-desc {
+  font-family: var(--font-display);
+  font-size: 0.84rem;
+  line-height: 1.7;
+  color: var(--gray);
+  flex: 1;
+}
+
+/* Tech tags */
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tag {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  border: 1px solid rgba(54, 255, 0, 0.2);
+  background: rgba(54, 255, 0, 0.04);
+  padding: 0.22rem 0.65rem;
+}
+
+/* Links row */
+.card-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  margin-top: auto;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0.45rem 1rem;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+}
+
+.card-link--primary {
+  background: var(--green-bright);
+  color: var(--bg-top);
+  font-weight: 700;
+}
+
+.card-link--primary:hover { background: var(--olive); }
+
+.card-link--secondary {
+  color: var(--white);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+.card-link--secondary:hover {
+  border-color: var(--green-bright);
+  color: var(--green-bright);
+}
+
+.link-placeholder {
+  font-family: var(--font-mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(159, 159, 159, 0.4);
+  font-style: italic;
+}
+
+/* Hidden cards (filtered out) */
+.project-card.hidden {
+  display: none;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 4rem 2rem;
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--gray);
+}
+
+/* ============================================================
+   ROADMAP STRIP
+   ============================================================ */
+.roadmap-section {
+  padding: 4rem;
+  border-top: 1px solid rgba(54, 255, 0, 0.07);
+  border-bottom: 1px solid rgba(54, 255, 0, 0.07);
+  background: rgba(31, 36, 121, 0.1);
+  backdrop-filter: blur(6px);
+}
+
+.roadmap-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.roadmap-grid {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+
+.roadmap-item {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 160px;
+  padding: 0.5rem 0;
+  position: relative;
+}
+
+/* Connecting line between items */
+.roadmap-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  width: 100%;
+  height: 1px;
+  background: rgba(54, 255, 0, 0.12);
+  transform: translateY(-50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.roadmap-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+
+.roadmap-dot--active {
+  background: var(--olive);
+  box-shadow: 0 0 8px rgba(167,191,6,0.6);
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+.roadmap-dot--queued {
+  background: transparent;
+  border: 1.5px solid var(--gray);
+}
+
+@keyframes dotPulse {
+  0%, 100% { box-shadow: 0 0 6px rgba(167,191,6,0.4); }
+  50%       { box-shadow: 0 0 14px rgba(167,191,6,0.8); }
+}
+
+.roadmap-label {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gray);
+}
+
+/* ============================================================
+   CTA
+   ============================================================ */
+.about-cta {
+  padding: 7rem 4rem;
+  text-align: center;
+  border-top: 1px solid rgba(54, 255, 0, 0.08);
+}
+
+.cta-label {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--green-bright);
+  margin-bottom: 1rem;
+}
+
+.cta-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 6vw, 4.5rem);
+  font-weight: 800;
+  color: var(--white);
+  margin-bottom: 2.5rem;
+  line-height: 1;
+}
+
+.cta-actions {
+  display: inline-flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* ============================================================
+   SCROLL REVEAL
+   ============================================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================================================
+   KEYFRAMES
+   ============================================================ */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 1100px) {
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 700px) {
+  .work-header-section  { padding: 4rem 2rem 3rem; }
+  .filter-bar           { padding: 0 2rem 2.5rem; }
+  .projects-grid-section{ padding: 0 2rem 4rem; }
+  .projects-grid        { grid-template-columns: 1fr; }
+  .roadmap-section      { padding: 3rem 2rem; }
+  .about-cta            { padding: 5rem 2rem; }
+  .work-bg-word         { display: none; }
+  .roadmap-grid         { flex-direction: column; align-items: flex-start; gap: 1rem; }
+  .roadmap-item::after  { display: none; }
+}
