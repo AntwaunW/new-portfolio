@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skills — Antwaun Washington</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="skills.css" />
+</head>
+<body>
+
+  <!-- Custom cursor -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Geometric background -->
+  <canvas id="geoBg" aria-hidden="true"></canvas>
+
+  <!-- Nav -->
+  <nav>
+    <a href="index.html" class="nav-logo">AW<span>_</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#">Work</a></li>
+      <li><a href="skills.html" class="nav-active">Skills</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Hire Me</a>
+  </nav>
+
+  <main class="skills-main">
+
+    <!-- ── PAGE HEADER ── -->
+    <section class="skills-header-section">
+      <div class="skills-header-inner">
+        <p class="section-tag">
+          <span class="tag-line"></span>
+          What I bring to the table
+        </p>
+        <h1 class="skills-title">
+          My <span class="title-green">Stack.</span>
+        </h1>
+        <p class="skills-subtitle">
+          A mix of creative, technical, and analytical ability — built across art school,
+          finance, military service, and self-driven development.
+        </p>
+      </div>
+      <div class="skills-bg-word" aria-hidden="true">SKILLS</div>
+    </section>
+
+    <!-- ── HONEST NOTE ── -->
+    <div class="honesty-bar reveal">
+      <span class="honesty-icon">&#9670;</span>
+      <p>These levels reflect where I am <strong>right now</strong> — honest, not inflated.
+         I'm actively building every day and the bars move with me.</p>
+    </div>
+
+    <!-- ══════════════════════════════════════
+         CATEGORY 1 — FRONTEND
+    ══════════════════════════════════════ -->
+    <section class="skill-category reveal">
+      <div class="category-label-col">
+        <div class="category-number">01</div>
+        <div class="category-title">Frontend</div>
+        <div class="category-desc">
+          The layer users see and touch. My strongest technical area — where my design
+          background and coding skills intersect most naturally.
+        </div>
+      </div>
+
+      <div class="bars-col">
+
+        <div class="skill-bar-item" data-pct="82">
+          <div class="skill-bar-top">
+            <span class="skill-name">HTML5</span>
+            <span class="skill-meta">Strong Foundation</span>
+            <span class="skill-pct">82%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--target:82%"></div>
+          </div>
+          <p class="skill-note">Semantic markup, accessibility patterns, clean document structure. Feels natural.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="78">
+          <div class="skill-bar-top">
+            <span class="skill-name">CSS3 / SCSS</span>
+            <span class="skill-meta">Strong — Animations Growing</span>
+            <span class="skill-pct">78%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill" style="--target:78%"></div>
+          </div>
+          <p class="skill-note">Layouts, Flexbox, Grid, variables, responsive design are solid. CSS animations still actively being refined.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="48">
+          <div class="skill-bar-top">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-meta">Comfortable Basics — Growing</span>
+            <span class="skill-pct">48%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--mid" style="--target:48%"></div>
+          </div>
+          <p class="skill-note">Comfortable with core concepts, DOM manipulation, and functions. Deepening knowledge of advanced patterns daily.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="42">
+          <div class="skill-bar-top">
+            <span class="skill-name">React</span>
+            <span class="skill-meta">5+ Months — Actively Building</span>
+            <span class="skill-pct">42%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--mid" style="--target:42%"></div>
+          </div>
+          <p class="skill-note">Built a personal app with useState, props, component architecture, and hooks. A lot learned — a lot more ahead.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CATEGORY 2 — BACKEND & TOOLS
+    ══════════════════════════════════════ -->
+    <section class="skill-category reveal">
+      <div class="category-label-col">
+        <div class="category-number">02</div>
+        <div class="category-title">Backend &amp;<br/>Workflow</div>
+        <div class="category-desc">
+          The infrastructure and tooling behind the product. Currently learning,
+          actively using, and building familiarity through real projects.
+        </div>
+      </div>
+
+      <div class="bars-col">
+
+        <div class="skill-bar-item" data-pct="35">
+          <div class="skill-bar-top">
+            <span class="skill-name">Node.js</span>
+            <span class="skill-meta">Early Stage</span>
+            <span class="skill-pct">35%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--low" style="--target:35%"></div>
+          </div>
+          <p class="skill-note">Exposure through bootcamp curriculum. Understanding of server-side concepts and how Node fits the full stack.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="38">
+          <div class="skill-bar-top">
+            <span class="skill-name">SQL</span>
+            <span class="skill-meta">Early Stage</span>
+            <span class="skill-pct">38%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--low" style="--target:38%"></div>
+          </div>
+          <p class="skill-note">Basic queries, data relationships, and table structure. Financial background makes data logic feel intuitive.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="40">
+          <div class="skill-bar-top">
+            <span class="skill-name">Git / GitHub</span>
+            <span class="skill-meta">Learning — Improving Daily</span>
+            <span class="skill-pct">40%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--low" style="--target:40%"></div>
+          </div>
+          <p class="skill-note">Commits, branches, and pushes are regular. More complex workflows still being built with guidance and practice.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="60">
+          <div class="skill-bar-top">
+            <span class="skill-name">VS Code</span>
+            <span class="skill-meta">Comfortable Daily Driver</span>
+            <span class="skill-pct">60%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--mid" style="--target:60%"></div>
+          </div>
+          <p class="skill-note">Primary development environment. Extensions, shortcuts, and integrated terminal are part of the daily workflow.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CATEGORY 3 — DESIGN
+    ══════════════════════════════════════ -->
+    <section class="skill-category reveal">
+      <div class="category-label-col">
+        <div class="category-number">03</div>
+        <div class="category-title">Design</div>
+        <div class="category-desc">
+          My longest-running skill set. Four years of formal fine arts education
+          across multiple mediums gives me a real creative edge as a developer.
+        </div>
+      </div>
+
+      <div class="bars-col">
+
+        <div class="skill-bar-item" data-pct="88">
+          <div class="skill-bar-top">
+            <span class="skill-name">Visual Design</span>
+            <span class="skill-meta">B.F.A. Trained</span>
+            <span class="skill-pct">88%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--high" style="--target:88%"></div>
+          </div>
+          <p class="skill-note">Composition, color theory, typography, and layout — studied formally and applied across drawing, painting, and digital mediums.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="85">
+          <div class="skill-bar-top">
+            <span class="skill-name">Illustration &amp; Drawing</span>
+            <span class="skill-meta">Core Discipline</span>
+            <span class="skill-pct">85%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--high" style="--target:85%"></div>
+          </div>
+          <p class="skill-note">Traditional and digital illustration. Strong foundational training in form, proportion, and visual storytelling.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="80">
+          <div class="skill-bar-top">
+            <span class="skill-name">Photography</span>
+            <span class="skill-meta">Studied &amp; Practiced</span>
+            <span class="skill-pct">80%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--high" style="--target:80%"></div>
+          </div>
+          <p class="skill-note">Composition, lighting, and editing. Studied as part of BFA curriculum — strengthens how I think about visual hierarchy in UI.</p>
+        </div>
+
+        <div class="skill-bar-item" data-pct="62">
+          <div class="skill-bar-top">
+            <span class="skill-name">Figma / UI Tools</span>
+            <span class="skill-meta">Growing — Design Instinct Helps</span>
+            <span class="skill-pct">62%</span>
+          </div>
+          <div class="bar-track">
+            <div class="bar-fill bar-fill--mid" style="--target:62%"></div>
+          </div>
+          <p class="skill-note">Prototyping, wireframing, and component design. Design instinct from BFA accelerates picking up new tools.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         CERTIFICATIONS
+    ══════════════════════════════════════ -->
+    <section class="cert-section reveal">
+      <div class="section-tag" style="margin-bottom:2rem">
+        <span class="tag-line"></span>
+        Certifications &amp; Training
+      </div>
+      <div class="cert-grid">
+
+        <div class="cert-card reveal">
+          <div class="cert-logo">CC</div>
+          <div class="cert-info">
+            <h3 class="cert-name">Full-Stack Web Developer</h3>
+            <p class="cert-issuer">Codecademy Bootcamp</p>
+            <p class="cert-detail">HTML · CSS · JavaScript · React · Node · SQL · Git</p>
+          </div>
+          <div class="cert-badge">Completed</div>
+        </div>
+
+        <div class="cert-card reveal" style="animation-delay:0.1s">
+          <div class="cert-logo">JSU</div>
+          <div class="cert-info">
+            <h3 class="cert-name">Bachelor of Fine Arts</h3>
+            <p class="cert-issuer">Jacksonville State University · 2016</p>
+            <p class="cert-detail">Drawing · Illustration · Painting · Photography · Design</p>
+          </div>
+          <div class="cert-badge cert-badge--olive">Degree</div>
+        </div>
+
+        <div class="cert-card reveal" style="animation-delay:0.2s">
+          <div class="cert-logo">AU</div>
+          <div class="cert-info">
+            <h3 class="cert-name">Master of Business Administration</h3>
+            <p class="cert-issuer">Ashland University · 2020</p>
+            <p class="cert-detail">Finance · Leadership · Strategic Analysis · Management</p>
+          </div>
+          <div class="cert-badge cert-badge--navy">Degree</div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════
+         SOFT SKILLS
+    ══════════════════════════════════════ -->
+    <section class="soft-section reveal">
+      <div class="section-tag" style="margin-bottom:2.5rem">
+        <span class="tag-line"></span>
+        Beyond the Tech
+      </div>
+      <div class="soft-grid">
+
+        <div class="soft-card reveal">
+          <div class="soft-icon">&#9670;</div>
+          <h4 class="soft-title">Critical Thinker</h4>
+          <p class="soft-body">Finance and military service both demand sound judgement under pressure. I approach problems methodically before acting.</p>
+        </div>
+
+        <div class="soft-card reveal" style="animation-delay:0.08s">
+          <div class="soft-icon">&#9651;</div>
+          <h4 class="soft-title">Fast Learner</h4>
+          <p class="soft-body">Self-taught developer who went from zero to building full-stack apps. I pick up new tools and frameworks quickly and intentionally.</p>
+        </div>
+
+        <div class="soft-card reveal" style="animation-delay:0.16s">
+          <div class="soft-icon">&#9632;</div>
+          <h4 class="soft-title">Consistent</h4>
+          <p class="soft-body">Whether it's military PT at 5am or a side project at midnight — I show up. Discipline is a skill I've built across every chapter of my life.</p>
+        </div>
+
+        <div class="soft-card reveal" style="animation-delay:0.24s">
+          <div class="soft-icon">&#9733;</div>
+          <h4 class="soft-title">Dedicated</h4>
+          <p class="soft-body">I don't half-commit. From a BFA to an MBA to active military service to coding daily — when I pursue something, I see it through.</p>
+        </div>
+
+        <div class="soft-card reveal" style="animation-delay:0.32s">
+          <div class="soft-icon">&#9671;</div>
+          <h4 class="soft-title">Creative Problem Solver</h4>
+          <p class="soft-body">A fine arts background rewired how I see challenges. I bring visual thinking and lateral reasoning to technical problems.</p>
+        </div>
+
+        <div class="soft-card reveal" style="animation-delay:0.40s">
+          <div class="soft-icon">&#9650;</div>
+          <h4 class="soft-title">Leadership</h4>
+          <p class="soft-body">Managed teams in finance, led responsibilities in the U.S. Army. I'm comfortable taking ownership and lifting others around me.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ── CTA ── -->
+    <section class="about-cta reveal">
+      <p class="cta-label">Interested in working together?</p>
+      <h2 class="cta-heading">Let's Build Something.</h2>
+      <div class="cta-actions">
+        <a href="index.html" class="btn-primary">
+          View My Work
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+        <a href="about.html" class="btn-secondary">About Me</a>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+  <script src="skills.js"></script>
+</body>
+</html>
